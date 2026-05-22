@@ -810,8 +810,16 @@
 
     /* Contact */
     .contact-section { grid-template-columns: 1fr; }
-    .contact-left { min-height: 260px; }
+    .contact-left { min-height: auto; }
+    .contact-left-overlay {
+      position: relative;
+      inset: auto;
+      padding: 3rem 1.5rem;
+      justify-content: flex-start;
+      gap: 1rem;
+    }
     .contact-left h2 { font-size: 2rem; }
+    .contact-left p { max-width: none; }
     .contact-right { padding: 3rem 1.5rem; }
     .form-row { grid-template-columns: 1fr; gap: 0; }
 

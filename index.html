@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Altaverde — Inmobiliaria de Lujo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="#" class="nav-logo">Altaverde</a>
+  <ul class="nav-links">
+    <li><a href="#properties">Propiedades</a></li>
+    <li><a href="#about">Nosotros</a></li>
+    <li><a href="#process">Proceso</a></li>
+    <li><a href="#contact">Contacto</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Solicitar Consulta</a>
+  <button type="button" class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<!-- MOBILE NAV OVERLAY -->
+<div class="nav-mobile" id="navMobile" role="navigation" aria-label="Menú principal móvil">
+  <a href="#properties">Propiedades</a>
+  <a href="#about">Nosotros</a>
+  <a href="#process">Proceso</a>
+  <a href="#contact">Contacto</a>
+  <a href="#contact" class="nav-cta-mobile">Solicitar Consulta</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-headline">
+      <h1>Inmobiliaria<br>de Lujo<br><em>vivir en altura</em></h1>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="num">120+</div>
+        <span class="label">Operaciones cerradas</span>
+      </div>
+      <div class="hero-stat">
+        <div class="num">18</div>
+        <span class="label">Agentes expertos</span>
+      </div>
+      <div class="hero-stat">
+        <div class="num">96+</div>
+        <span class="label">Valoraciones de clientes</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FILTER + PROPERTIES -->
+<section class="filter-section" id="properties">
+  <div class="filter-header fade-up">
+    <div>
+      <h2 class="section-title">¿Qué opción<br><em>se adapta a ti?</em></h2>
+    </div>
+    <p class="filter-note">Selecciona tu objetivo y explora nuestra selección a medida.</p>
+  </div>
+  <div class="filter-tabs fade-up">
+    <button class="filter-tab active" onclick="setTab(this, 'live')">Residir</button>
+    <button class="filter-tab" onclick="setTab(this, 'invest')">Invertir</button>
+    <button class="filter-tab" onclick="setTab(this, 'rent')">Alquilar</button>
+  </div>
+
+  <!-- Property 1 -->
+  <div class="property-card fade-up">
+    <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1400&q=80" alt="Palmetto Estate">
+    <div class="property-overlay"></div>
+    <div class="property-badge">Nueva Incorporación</div>
+    <div class="property-info">
+      <div>
+        <div class="property-location">📍 Marbella, Málaga</div>
+        <div class="property-name">Palmetto Estate</div>
+        <div class="property-desc">Villa de primera línea de playa con piscina infinita, acceso privado al mar y sala de cine — diseñada para quienes exigen lo extraordinario.</div>
+        <div class="property-meta">
+          <span><span class="dot-icon">b</span> 4 hab.</span>
+          <span><span class="dot-icon">⌂</span> 6 baños</span>
+          <span><span class="dot-icon">▣</span> 3 coches</span>
+          <span><span class="dot-icon">◻</span> 420 m²</span>
+        </div>
+        <div class="property-price"><span>desde</span>3.750.000 €</div>
+      </div>
+      <button class="view-btn">Ver Propiedad</button>
+    </div>
+  </div>
+
+  <!-- Property 2 -->
+  <div class="property-card fade-up">
+    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1400&q=80" alt="Ridgeline Retreat">
+    <div class="property-overlay"></div>
+    <div class="property-badge">Nueva Incorporación</div>
+    <div class="property-info">
+      <div>
+        <div class="property-location">📍 Sotogrande, Cádiz</div>
+        <div class="property-name">Ridgeline Retreat</div>
+        <div class="property-desc">Obra maestra de la arquitectura contemporánea entre colinas. Muros de vidrio del suelo al techo, piscina de nado y vistas panorámicas que redefinen la serenidad.</div>
+        <div class="property-meta">
+          <span><span class="dot-icon">b</span> 3 hab.</span>
+          <span><span class="dot-icon">⌂</span> 4 baños</span>
+          <span><span class="dot-icon">▣</span> 2 coches</span>
+          <span><span class="dot-icon">◻</span> 310 m²</span>
+        </div>
+        <div class="property-price"><span>desde</span>2.490.000 €</div>
+      </div>
+      <button class="view-btn">Ver Propiedad</button>
+    </div>
+  </div>
+
+  <!-- Property 3 -->
+  <div class="property-card fade-up">
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1400&q=80" alt="Casa Lumière">
+    <div class="property-overlay"></div>
+    <div class="property-badge">Destacada</div>
+    <div class="property-info">
+      <div>
+        <div class="property-location">📍 La Zagaleta, Málaga</div>
+        <div class="property-name">Casa Lumière</div>
+        <div class="property-desc">Una exclusiva finca andaluza con interiores escultóricos, bodega privada y terraza panorámica con vistas a la sierra.</div>
+        <div class="property-meta">
+          <span><span class="dot-icon">b</span> 5 hab.</span>
+          <span><span class="dot-icon">⌂</span> 7 baños</span>
+          <span><span class="dot-icon">▣</span> 4 coches</span>
+          <span><span class="dot-icon">◻</span> 580 m²</span>
+        </div>
+        <div class="property-price"><span>desde</span>5.200.000 €</div>
+      </div>
+      <button class="view-btn">Ver Propiedad</button>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section class="about-section" id="about">
+  <div class="about-image"></div>
+  <div class="about-content">
+    <span class="eyebrow">Nuestra Filosofía</span>
+    <h2>No vendemos casas.<br>Te situamos en <em>tu mundo.</em></h2>
+    <div class="divider"></div>
+    <p>Altaverde es una firma boutique de inmobiliaria de lujo construida sobre la discreción, la experiencia y un compromiso inquebrantable con la visión del cliente. Seleccionamos a mano cada propiedad de nuestra cartera para garantizar que cumple los más altos estándares de arquitectura, privacidad y estilo de vida.</p>
+    <div class="about-features">
+      <div class="about-feature">
+        <strong>Servicio Integral</strong>
+        <span>Asesoramiento legal, financiero y postventa incluido en cada operación.</span>
+      </div>
+      <div class="about-feature">
+        <strong>Cartera Curada</strong>
+        <span>Solo el 3% superior de los inmuebles supera nuestros criterios de selección.</span>
+      </div>
+      <div class="about-feature">
+        <strong>Total Discreción</strong>
+        <span>Consultas protegidas por NDA para clientes de alto perfil.</span>
+      </div>
+      <div class="about-feature">
+        <strong>Alcance Global</strong>
+        <span>Red de contactos en Europa, Asia y las Américas.</span>
+      </div>
+    </div>
+    <a href="#contact" class="btn-outline-gold">Iniciar una conversación</a>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section" id="process">
+  <div class="section-header fade-up">
+    <span class="eyebrow">Voces de Clientes</span>
+    <h2 class="section-title">Lo que dicen <em>nuestros clientes</em></h2>
+    <div class="divider" style="margin: 1.5rem auto 0;"></div>
+  </div>
+  <div class="testimonials-grid">
+    <div class="testimonial-card fade-up">
+      <div class="testimonial-stars">★ ★ ★ ★ ★</div>
+      <p class="testimonial-text">Altaverde comprendió nuestro estilo de vida desde la primera llamada. Nos encontraron una casa que no sabíamos que buscábamos — y nos acompañaron en cada paso con total fluidez.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">MR</div>
+        <div>
+          <div class="author-name">Marcus & Rachel Voss</div>
+          <div class="author-role">Compradores de Palmetto Estate</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-up">
+      <div class="testimonial-stars">★ ★ ★ ★ ★</div>
+      <p class="testimonial-text">El nivel de discreción y profesionalismo fue extraordinario. En 22 años de operaciones inmobiliarias, esta fue la transacción más impecable que he vivido jamás.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">SL</div>
+        <div>
+          <div class="author-name">Sofia Lindqvist</div>
+          <div class="author-role">Clienta de Inversión</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-up">
+      <div class="testimonial-stars">★ ★ ★ ★ ★</div>
+      <p class="testimonial-text">Desde la primera visita hasta la firma final, el equipo de Altaverde convirtió un proceso complejo en algo completamente natural. Personas verdaderamente excepcionales.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">JC</div>
+        <div>
+          <div class="author-name">James & Claire Okafor</div>
+          <div class="author-role">Compradores de Casa Lumière</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / FORM -->
+<section class="contact-section" id="contact">
+  <div class="contact-left">
+    <div class="contact-left-overlay">
+      <h2>Comienza tu<br><em>búsqueda hoy.</em></h2>
+      <div class="divider"></div>
+      <p>Nuestros asesores están disponibles para consultas privadas, en persona o por videollamada segura. Respondemos en menos de 24 horas.</p>
+    </div>
+  </div>
+  <div class="contact-right">
+    <span class="eyebrow">Consulta Privada</span>
+    <form onsubmit="handleSubmit(event)">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="fname">Nombre</label>
+          <input type="text" id="fname" placeholder="Javier">
+        </div>
+        <div class="form-group">
+          <label for="lname">Apellidos</label>
+          <input type="text" id="lname" placeholder="García Morales">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Correo Electrónico</label>
+        <input type="email" id="email" placeholder="javier@dominio.com">
+      </div>
+      <div class="form-group">
+        <label for="phone">Teléfono</label>
+        <input type="tel" id="phone" placeholder="+34 600 000 000">
+      </div>
+      <div class="form-group">
+        <label for="intent">Estoy interesado en</label>
+        <select id="intent">
+          <option value="">Selecciona tu objetivo</option>
+          <option>Comprar una propiedad</option>
+          <option>Invertir en inmobiliaria</option>
+          <option>Alquilar una propiedad</option>
+          <option>Poner en venta mi propiedad</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="budget">Presupuesto estimado</label>
+        <select id="budget">
+          <option value="">Selecciona un rango</option>
+          <option>1M € – 2,5M €</option>
+          <option>2,5M € – 5M €</option>
+          <option>5M € – 10M €</option>
+          <option>Más de 10M €</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Cuéntanos tu visión</label>
+        <textarea id="message" placeholder="Describe lo que estás buscando..."></textarea>
+      </div>
+      <button type="submit" class="form-submit" id="submitBtn">Solicitar Consulta</button>
+    </form>
+    <p id="form-success" style="display:none; margin-top:1.2rem; font-size:0.82rem; color:#4A6B5A; letter-spacing:0.05em;">
+      ✓ Gracias — un miembro de nuestro equipo se pondrá en contacto contigo en menos de 24 horas.
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="logo">Altaverde</span>
+      <p>Firma boutique de asesoramiento inmobiliario de lujo, dedicada a conectar a personas excepcionales con propiedades extraordinarias en toda España y más allá.</p>
+      <div class="footer-social">
+        <a href="#">IG</a>
+        <a href="#">LI</a>
+        <a href="#">FB</a>
+        <a href="#">YT</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Propiedades</h4>
+      <ul>
+        <li><a href="#">En Venta</a></li>
+        <li><a href="#">En Alquiler</a></li>
+        <li><a href="#">Inversión</a></li>
+        <li><a href="#">Nuevas Incorporaciones</a></li>
+        <li><a href="#">Fuera de Mercado</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="#">Quiénes Somos</a></li>
+        <li><a href="#">Nuestro Equipo</a></li>
+        <li><a href="#">Proceso</a></li>
+        <li><a href="#">Testimonios</a></li>
+        <li><a href="#">Trabaja con Nosotros</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <ul>
+        <li><a href="#">+34 952 000 190</a></li>
+        <li><a href="#">hola@altaverde.es</a></li>
+        <li><a href="#">Avda. del Mar, 42</a></li>
+        <li><a href="#">Marbella, Málaga</a></li>
+        <li><a href="#">Agendar Llamada</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Altaverde Real Estate. Todos los derechos reservados.</p>
+    <div class="footer-bottom-links">
+      <a href="#">Política de Privacidad</a>
+      <a href="#">Términos de Uso</a>
+      <a href="#">Política de Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
